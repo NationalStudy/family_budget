@@ -11,15 +11,25 @@
     </div>
   <% end %>
 
+  <div class="control-group">
+    <%= f.label 'Type', class: 'control-label' %>
+    <div class='controls'>
+      <%= f.select(:type_account, options_for_select([['Cash', 'Cash'],['Bank card', 'Bank card'],['Money box', 'Money box']])) %>
+    </div>
+  </div>
+
   <div class="field">
-    <%= f.collection_select(:id_type_account, TypeAccount.all, :id, :type_account) %><br>
     <%= f.label :name_account %><br>
     <%= f.text_field :name_account %>
   </div>
   <div class="field">
     <%= f.label :amount_account %><br>
     <%= f.text_field :amount_account %>
+    <%= f.select(:currency, options_for_select([['$', '$'],['Rub', 'Rub'],['UAH', 'UAH'],['EUR', 'EUR']])) %>
   </div>
+
+    <div class='controls'>
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>

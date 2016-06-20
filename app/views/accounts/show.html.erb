@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Type account:</strong>
+  <%= @account.type_account %>
+</p>
 
 <p>
   <strong>Name account:</strong>
@@ -9,12 +13,9 @@
 <p>
   <strong>Amount account:</strong>
   <%= @account.amount_account %>
+  <%= @account.currency %>
 </p>
 
-<p>
-  <strong>Type account:</strong>
-  <%= @account.id_type_account %>
-</p>
 
 <%= link_to 'Edit', edit_account_path(@account) %> |
 <%= link_to 'Back', accounts_path %>
