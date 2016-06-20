@@ -69,6 +69,6 @@ class DebtsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def debt_params
-      params.require(:debt).permit(:name_debt, :amount_debt)
+      params.require(:debt).permit(:name_debt, :amount_debt, :id_type_debts)
     end
 end

@@ -1,0 +1,21 @@
+<%= form_for(@type_debt) do |f| %>
+  <% if @type_debt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@type_debt.errors.count, "error") %> prohibited this type_debt from being saved:</h2>
+
+      <ul>
+      <% @type_debt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type_debt %><br>
+    <%= f.text_field :type_debt %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
